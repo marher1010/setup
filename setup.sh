@@ -15,16 +15,16 @@ pip install Flask
 mkdir static templates
 
 # Copy HTML files to templates directory
-cp temp_repo/*.html templates/
+cp app_files/*.html templates/
 
 # Copy CSS files to static/css directory
-cp temp_repo/*.css static/css/
+cp app_files/*.css static/css/
 
 # Copy JS files to static/js directory
-cp temp_repo/*.js static/js/
+cp app_files/*.js static/js/
 
 # Remove the temporary repository
-rm -rf temp_repo
+rm -rf app_files
 
 # Create app.py file
 touch app.py
