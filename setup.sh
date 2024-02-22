@@ -2,7 +2,7 @@
 
 # Create directory "Web App"
 mkdir "Web App"
-cd "Web App" || exit
+cd "Web App"
 
 # Create Python virtual environment
 python3 -m venv "Web App Venv"
@@ -13,7 +13,21 @@ pip install Flask
 
 # Create directory structure
 mkdir static templates
-mkdir static/css static/js
+
+# Clone the repository containing HTML, CSS, and JS files
+git clone https://github.com/mandreesen-borowitz/web_application.git temp_repo
+
+# Copy HTML files to templates directory
+cp temp_repo/*.html templates/
+
+# Copy CSS files to static/css directory
+cp temp_repo/*.css static/css/
+
+# Copy JS files to static/js directory
+cp temp_repo/*.js static/js/
+
+# Remove the temporary repository
+rm -rf temp_repo
 
 # Create app.py file
 touch app.py
@@ -31,9 +45,5 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 EOF
-
-# Create a minimal HTML template file
-touch templates/index.html
-echo "<h1>Hello, World!</h1>" > templates/index.html
 
 echo "Web App setup complete."
