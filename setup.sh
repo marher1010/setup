@@ -14,9 +14,6 @@ pip install Flask
 # Create directory structure
 mkdir static templates
 
-# Clone the repository containing HTML, CSS, and JS files
-git clone https://github.com/mandreesen-borowitz/web_application.git temp_repo
-
 # Copy HTML files to templates directory
 cp temp_repo/*.html templates/
 
