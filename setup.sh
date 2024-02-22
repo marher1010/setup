@@ -9,10 +9,11 @@ python3 -m venv "Web App Venv"
 source "Web App Venv/bin/activate"
 
 # Install Flask
+pip install --upgrade pip
 pip install Flask
 
 # Create directory structure
-mkdir static templates
+mkdir static static/css static/js templates
 
 # Copy HTML files to templates directory
 cp app_files/*.html templates/
